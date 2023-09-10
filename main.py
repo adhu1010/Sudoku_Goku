@@ -1,9 +1,10 @@
 import numpy as np
 grid=[]
-for i in range(0,9):
+for i in range(1,10):
     row=[]
-    for j in range(0,9):
-        x=int(input("Enter the number  :"))
+    for j in range(1,10):
+        print("Enter the number for",j,"th element of",i,"th row")
+        x=int(input())
         row.append(x)
     grid.append(row)
         
@@ -35,7 +36,6 @@ def solve():
                         solve()
                         grid[y][x]=0
                 return
-    print(np.matrix(grid))
-    input("more?")  
+    print(np.matrix(grid))  
                           
 solve()
