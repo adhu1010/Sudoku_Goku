@@ -1,13 +1,25 @@
 import numpy as np
-grid=[]
-for i in range(1,10):
-    row=[]
-    for j in range(1,10):
-        print("Enter the number for",j,"th element of",i,"th row")
-        x=int(input())
-        row.append(x)
-    grid.append(row)
-        
+grid=[[0,0,0,0,0,0,0,0,0],
+      [0,0,0,0,0,0,0,0,0],
+      [0,0,0,0,0,0,0,0,0],
+      [0,0,0,0,0,0,0,0,0],
+      [0,0,0,0,0,0,0,0,0],
+      [0,0,0,0,0,0,0,0,0],
+      [0,0,0,0,0,0,0,0,0],
+      [0,0,0,0,0,0,0,0,0],
+      [0,0,0,0,0,0,0,0,0]]
+ch=True
+while ch:
+    i=int(input("enter the row position of the element  : "))
+    j=int(input("enter the coloumn position of the element  : "))
+    x=int(input("enter the element : ")) 
+    grid[i-1][j-1]=x
+    y=input("Do you wnat to change more(y/n)")
+    if y=="n":
+        ch=False
+    else:
+        ch=True
+      
 print(np.matrix(grid))
 def possible(y,x,n):
     global grid
