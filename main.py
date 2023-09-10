@@ -1,4 +1,8 @@
 import numpy as np
-for i in range(9):
-    for j in range(9)
-print()
+grid=[[],[],[],[],[],[],[],[],[]]
+for i in range(1,10):
+    for j in range(1,10):
+        x=int(input("Enter the number  :"))
+        grid[i][j]=x
+        
+print(np.matrix(grid))
